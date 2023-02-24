@@ -1,0 +1,14 @@
+<div class="content" role="main">
+  <div class="card">
+    <div class="form-group">
+      <p>SEARCH COUNTRIES</p>
+      <label for="search country">Search Country</label>
+      <input type="text" class="form-control" id="search-text" aria-describedby="search-text" [(ngModel)]="searchText" placeholder="Enter country" autofocus>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let c of characters | appFilter: searchText">
+        {{c}}
+      </li> 
+    </ul>
+  </div>
+</div>
